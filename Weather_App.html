@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="Weather_App.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input" id="input" align="center">
+        <div class="extra"></div>
+        <div style="background-color:white;border-radius: 10px;box-shadow:  0px 10px 10px;padding: 20px;" class="city-box">
+        <div align="left" style="font-size: 20px;padding-bottom: 12px;color: black;">City name:</div><input type="text" style="width:98%" id="city">
+        <div style="display:flex;padding-top: 10px;">
+            <hr style='width:45%;height:0px'>or<hr width="45%">
+        </div>
+        <input type="checkbox" id="geolocation" checked> Use my geolocation
+        <button onclick="show()" style="width:100%;background-color: green;color:white;font-size:20px;margin-top:10%" align="bottom">Get Report</button>
+        </div>
+    </div>
+    <div class="hidden" id="main">
+        <div class="container" id="container">
+            <div class="date-time-box">
+                <div style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" id="time"><span class="meridian" id="meridian"></span></div>
+                <span style="font-size: 30px;" align="right"><div id='date' style>loading...</div></span>
+                <div id="area" style="font-size:20px;padding:10px" align="right"></div>
+            </div>
+            <div class="main-box" align="center">
+                <img src="" id="weather-icon-today">
+                <div class="temp" style="font-size:55px;" id="temp-today">00.0&#176;C</div>
+                <div id="day" style="font-size:40px;"></div>
+            </div>
+            <div class="weather-detail-box" id="weather-details">
+                <div class="weather-property">
+                    <div id="humidity" align="left">Humidity</div>
+                    <div id="humidity-value" align="right" >0</div>
+                </div>
+                    <hr>
+                <div class="weather-property">
+                    <div id="Wind-speed" align="left">Wind speed</div>
+                    <div id="Wind-speed-value" align="right">0</div>
+                </div>
+                    <hr>
+                <div class="weather-property">
+                    <div id="Pressure" align="left">Pressure</div>
+                    <div id="Pressure-value" align="right">0</div>
+                </div>
+                    <hr>
+                <div class="weather-property">
+                    <div id="Wind-deg" align="left">Wind degree</div>
+                    <div id="Wind-deg-value" align="right">0</div>
+                </div>
+                    <hr>
+                <div class="weather-property">
+                    <div id="Dew-point" align="left">Dew Point</div>
+                    <div id="Dew-point-value" align="right">0</div>
+                </div>
+                    <hr>
+                <div class="weather-property">
+                    <div id="visibility" align="left">Visibility</div>
+                    <div id="visibility-value" align="right">0</div>
+                </div>           
+            </div>
+        </div>
+        <div class="forecasts" id="forecasts" align="center">
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="Weather_App.js"></script>
+</body>
+</html>
